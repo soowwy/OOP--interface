@@ -7,13 +7,13 @@
  */
 class ClimateInfo implements IPrintable
 {
-    protected $minTempC;
-    protected $maxTempC;
+    protected $minTemp;
+    protected $maxTemp;
 
-    public function __construct($minTempC, $maxTempC)
+    public function __construct($minTemp, $maxTemp)
     {
-        $this->minTempC = $minTempC;
-        $this->maxTempC = $maxTempC;
+        $this->minTemp = $minTemp;
+        $this->maxTemp = $maxTemp;
     }
 
     public function __get($name)
@@ -24,6 +24,6 @@ class ClimateInfo implements IPrintable
     public function __toString()
     {
         return sprintf('%s %s',
-            $this->minTempC, $this->maxTempC);
+            $this->minTemp, $this->maxTemp);
     }
 }
